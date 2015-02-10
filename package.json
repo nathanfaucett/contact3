@@ -1,0 +1,26 @@
+{
+  "name": "contact3",
+  "version": "0.0.1",
+  "description": "contact3 for the browser and node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanfaucett/contact3.git"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "contact3",
+    "contact3.js"
+  ],
+  "author": "Nathan Faucett",
+  "license": "BSD-2-Clause",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jsbeautifier": "^0.2.7"
+  },
+  "dependencies": {
+    "vec3": "nathanfaucett/vec3",
+    "create_pool": "nathanfaucett/create_pool"
+  }
+}
