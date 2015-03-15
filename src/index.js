@@ -19,3 +19,9 @@ Contact3.create = function() {
 Contact3.prototype.destroy = function() {
     return Contact3.release(this);
 };
+
+Contact3.prototype.destructor = function() {
+    vec3.set(this.normal, 0, 0, 1);
+    vec3.set(this.point, 0, 0, 0);
+    this.depth = 0;
+};
