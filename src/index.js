@@ -6,8 +6,8 @@ module.exports = Contact3;
 
 
 function Contact3() {
-    this.normal = vec3.create();
-    this.point = vec3.create();
+    this.normal = vec3.create(0, 0, 1);
+    this.point = vec3.create(0, 0, 0);
     this.depth = 0;
 }
 createPool(Contact3);
