@@ -2,6 +2,9 @@ var vec3 = require("vec3"),
     createPool = require("create_pool");
 
 
+var Contact3Prototype;
+
+
 module.exports = Contact3;
 
 
@@ -11,17 +14,19 @@ function Contact3() {
     this.depth = 0;
 }
 createPool(Contact3);
+Contact3Prototype = Contact3.prototype;
 
 Contact3.create = function() {
     return Contact3.getPooled();
 };
 
-Contact3.prototype.destroy = function() {
+Contact3Prototype.destroy = function() {
     return Contact3.release(this);
 };
 
-Contact3.prototype.destructor = function() {
+Contact3Prototype.destructor = function() {
     vec3.set(this.normal, 0, 0, 1);
     vec3.set(this.point, 0, 0, 0);
     this.depth = 0;
+    return this;
 };
